@@ -1,5 +1,4 @@
 public record Index(int x, int y) {
-
     @Override
     public boolean equals(Object obj) {
         if (obj == this) {

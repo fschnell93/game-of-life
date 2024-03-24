@@ -1,40 +1,40 @@
 public class GameOfLifeGrid {
-    private final int rows;
-    private final int columns;
+    private final int numberOfRows;
+    private final int numberOfColumns;
     private boolean[][] grid;
 
-    public GameOfLifeGrid(int rows, int columns, float aliveProbability) {
-        this.rows = rows;
-        this.columns = columns;
+    public GameOfLifeGrid(int numberOfRows, int numberOfColumns, float aliveProbability) {
+        this.numberOfRows = numberOfRows;
+        this.numberOfColumns = numberOfColumns;
         this.initializeGrid(aliveProbability);
     }
 
     private void initializeGrid(float aliveProbability) {
-        this.grid = new boolean[rows][columns];
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
+        this.grid = new boolean[numberOfRows][numberOfColumns];
+        for (int i = 0; i < numberOfRows; i++) {
+            for (int j = 0; j < numberOfColumns; j++) {
                 grid[i][j] = Math.random() < aliveProbability;
             }
         }
     }
 
-    public int getRows() {
-        return rows;
+    public int getNumberOfRows() {
+        return numberOfRows;
     }
 
-    public int getColumns() {
-        return columns;
+    public int getNumberOfColumns() {
+        return numberOfColumns;
     }
 
     public boolean[][] getGrid() {
         return grid;
     }
 
-    public void setCellAlive(Index index, boolean value) {
-        this.grid[index.x()][index.y()] = value;
+    public void setCellStatus(Index index, boolean status) {
+        this.grid[index.x()][index.y()] = status;
     }
 
-    public boolean getCellAlive(Index index) {
+    public boolean getCellStatus(Index index) {
         return this.grid[index.x()][index.y()];
     }
 }
