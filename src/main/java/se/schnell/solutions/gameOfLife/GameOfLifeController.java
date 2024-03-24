@@ -1,3 +1,5 @@
+package se.schnell.solutions.gameOfLife;
+
 import java.util.ArrayList;
 import java.util.List;
 

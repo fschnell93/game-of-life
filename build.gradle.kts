@@ -1,5 +1,10 @@
 plugins {
     id("java")
+    id ("application")
+}
+
+application {
+    mainClass = "se.schnell.solutions.gameOfLife.GameOfLifeApp"
 }
 
 group = "org.example"
@@ -18,4 +23,7 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
     jvmArgs("-XX:+EnableDynamicAgentLoading", "-Xshare:off")
+    testLogging {
+        events("passed")
+    }
 }

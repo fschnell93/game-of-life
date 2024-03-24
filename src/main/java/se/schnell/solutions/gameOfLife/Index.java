@@ -1,3 +1,5 @@
+package se.schnell.solutions.gameOfLife;
+
 public record Index(int x, int y) {
     @Override
     public boolean equals(Object obj) {

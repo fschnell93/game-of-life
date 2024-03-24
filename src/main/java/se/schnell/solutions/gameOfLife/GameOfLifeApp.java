@@ -1,4 +1,6 @@
-public class GameOfLife {
+package se.schnell.solutions.gameOfLife;
+
+public class GameOfLifeApp {
     public static void main(String[] args) throws InterruptedException {
         if (args.length < 3) {
             throw new IllegalArgumentException("Three arguments required");

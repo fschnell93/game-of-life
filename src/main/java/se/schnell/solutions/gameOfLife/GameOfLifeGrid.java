@@ -1,3 +1,5 @@
+package se.schnell.solutions.gameOfLife;
+
 public class GameOfLifeGrid {
     private final int numberOfRows;
     private final int numberOfColumns;

@@ -1,3 +1,6 @@
+package se.schnell.solutions.gameOfLife;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -18,27 +21,27 @@ public class GameOfLifeControllerTest {
 
     @Test
     public void givenLiveCellWithOneLiveNeighbourThenCellShouldDie() {
-        assertFalse(controller.willSurviveToNextGeneration(1, true));
+        Assertions.assertFalse(controller.willSurviveToNextGeneration(1, true));
     }
 
     @Test
     public void givenLiveCellWithTwoLiveNeighboursThenCellShouldLive() {
-        assertTrue(controller.willSurviveToNextGeneration(2, true));
+        Assertions.assertTrue(controller.willSurviveToNextGeneration(2, true));
     }
 
     @Test
     public void givenLiveCellWithThreeLiveNeighboursThenCellShouldLive() {
-        assertTrue(controller.willSurviveToNextGeneration(3, true));
+        Assertions.assertTrue(controller.willSurviveToNextGeneration(3, true));
     }
 
     @Test
     public void givenLiveCellWithMoreThenThreeLiveNeighboursThenCellShouldDie() {
-        assertFalse(controller.willSurviveToNextGeneration(4, true));
+        Assertions.assertFalse(controller.willSurviveToNextGeneration(4, true));
     }
 
     @Test
     public void givenDeadCellWithThreeLiveNeighboursThenCellShouldLive() {
-        assertTrue(controller.willSurviveToNextGeneration(3, false));
+        Assertions.assertTrue(controller.willSurviveToNextGeneration(3, false));
     }
 
     @Test
