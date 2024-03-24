@@ -1,6 +1,12 @@
 public class GameOfLife {
     public static void main(String[] args) throws InterruptedException {
-        GameOfLifeGrid grid = new GameOfLifeGrid(20, 20, 0.5f);
+        if (args.length < 3) {
+            throw new IllegalArgumentException("Three arguments required");
+        }
+        int numberOfRows = Integer.parseInt(args[0]);
+        int numberOfColumns = Integer.parseInt(args[1]);
+        float aliveProbability = Float.parseFloat(args[2]);
+        GameOfLifeGrid grid = new GameOfLifeGrid(numberOfRows, numberOfColumns, aliveProbability);
         GameOfLifeController controller = new GameOfLifeController(grid);
         System.out.println("Initial generation:");
         printGrid(grid.getGrid());
@@ -20,6 +26,6 @@ public class GameOfLife {
             System.out.println();
         }
         System.out.println();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 }
