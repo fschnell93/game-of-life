@@ -7,7 +7,7 @@ public class GameOfLifeApp {
         }
         int numberOfRows = Integer.parseInt(args[0]);
         int numberOfColumns = Integer.parseInt(args[1]);
-        float aliveProbability = Float.parseFloat(args[2]);
+        double aliveProbability = Double.parseDouble(args[2]);
         GameOfLifeGrid grid = new GameOfLifeGrid(numberOfRows, numberOfColumns, aliveProbability);
         GameOfLifeController controller = new GameOfLifeController(grid);
         System.out.println("Initial generation:");

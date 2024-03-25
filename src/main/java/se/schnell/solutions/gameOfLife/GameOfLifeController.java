@@ -18,7 +18,8 @@ public class GameOfLifeController {
                 int numberOfLivingNeighbours = (int) neighbours
                         .stream()
                         .map(grid::getCellStatus)
-                        .filter(isAlive -> isAlive).count();
+                        .filter(isAlive -> isAlive)
+                        .count();
                 boolean liveNextGeneration = willSurviveToNextGeneration(numberOfLivingNeighbours, grid.getCellStatus(index));
                 grid.setCellStatus(index, liveNextGeneration);
             }

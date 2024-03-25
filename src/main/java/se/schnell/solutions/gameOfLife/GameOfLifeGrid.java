@@ -5,13 +5,13 @@ public class GameOfLifeGrid {
     private final int numberOfColumns;
     private boolean[][] grid;
 
-    public GameOfLifeGrid(int numberOfRows, int numberOfColumns, float aliveProbability) {
+    public GameOfLifeGrid(int numberOfRows, int numberOfColumns, double aliveProbability) {
         this.numberOfRows = numberOfRows;
         this.numberOfColumns = numberOfColumns;
         this.initializeGrid(aliveProbability);
     }
 
-    private void initializeGrid(float aliveProbability) {
+    private void initializeGrid(double aliveProbability) {
         this.grid = new boolean[numberOfRows][numberOfColumns];
         for (int i = 0; i < numberOfRows; i++) {
             for (int j = 0; j < numberOfColumns; j++) {
